@@ -1,14 +1,21 @@
+<?php
+session_start();
+    if (!$_SESSION['index'] == 'check') {
+        header("Location: ../index.php?error=Tienes que iniciar pulsando el boton");
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envio de datos</title>
+    <title>Nivel_1</title>
 </head>
 <body>
-    <h1>Adivinanza</h1>
+    <h1>Nivel 1</h1>
 
-    <h3>dada</h3>
+    <h3>¿Cual es el lenguaje de programación más usado en la web?</h3>
 
     <form action="../proc/res.proc.php" method="post">
         
@@ -47,5 +54,3 @@
     ?>
 </body>
 </html>
-
-

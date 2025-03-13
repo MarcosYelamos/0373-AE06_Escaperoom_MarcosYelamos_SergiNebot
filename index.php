@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Escape Room</title>
 </head>
 <body>
     <h1>Escape Room: El Hacker del Futuro</h1>
@@ -15,6 +15,18 @@
         <li>Si fallas, intenta de nuevo hasta encontrar la respuesta correcta.</li>
         <li>¡Buena suerte, hacker!</li>
     </ol>
-    <a href="./views/pantalla1.php" class="boton">Iniciar Desafío</a>
+    <form action="./proc/res.proc.php" method="post">
+        <input type="submit" name="index" value="Iniciar EscapeRoom">
+    </form>
+    <br><br>
+    <a href="./proc/replay.proc.php">Reinicio de emergencia</a>
+
+    <?php
+        
+        if (isset($_GET['error'])) {
+            echo "<p>Error: " . $_GET['error'] . "</p>";
+        }
+
+    ?>
 </body>
 </html>
